@@ -1,10 +1,21 @@
-
+% This script was created to help visualize Jacobi Contours in the Circular
+% Restricted 3-Body Problem (CR3BP). The full post can be found here 
+%       https://gereshes.com/2018/11/26/jacobi-and-his-constant-the-3-body-problem
+% More on the CR3BP can be found here
+%       https://gereshes.com/category/math/astrodynamics/cr3bp/
+% 
+% Note: This script requires the jacobiValue3D() function which can be
+% found here https://github.com/gereshes/CR3BP-Functions
+%
+% Ari Rubinsztejn
+% www.gereshes.com
+% 2018.11.22
 
 close all
 clear all
 clc
 
-%% 2D XYplaine ZVC Earth
+%% 2D XY plane ZVC Earth
 mu=.012;
 stepX=.002;
 stepY=.002
@@ -70,8 +81,9 @@ title('Jacobi Contour Earth-Moon System (X-Z View)')
 xlabel('X-Axis (ND)')
 ylabel('Z-Axis (ND)')
 
-%% Plotting both together (Didn't work)
+%% Plotting both together 
 %{
+%(Didn't work)
 figure()
 subplot(2,1,1)
 contour(x,y,holderXY','DisplayName','Jacobi Contour')
